@@ -8,19 +8,26 @@ body {
     padding: 0;
     color: #333;
 }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 /* Header-Stile */
 header {
-    background: #e8491d;
-    color: #ffffff;
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
+    background: #e8491d;
+}
+
+#grad1 {
+    background-image: linear-gradient(90deg, #e8491d, #f4c542); 
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
-    color: #f4c542;
+    color: #ffffff;
     outline: white;
     outline-width: 10px;
 }
@@ -59,16 +66,37 @@ footer {
     background: #e8491d;
     color: #ffffff;
     text-align: center;
-    padding: 10px 0;
+    padding: none;
     position: fixed;
     width: 100%;
-    height: 4%;
+    height: 8%;
     bottom: 0;
-    text-align: center;
+    display: flex; /* Flexbox zur Zentrierung */
+    justify-content: center; /* Horizontale Zentrierung */
+    align-items: center; /* Vertikale Zentrierung */
 }
 
 footer p {
     margin: 0;
-    color: #f4c542;
+    color: #ffffff;
     font-weight: bold;
+    font-size: 20px;
 }
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    font-size: 24px;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  /* Der mittlere Slide soll größer angezeigt werden */
+  .swiper-slide-active {
+    transform: scale(1.2); /* Vergrößere das Element im Fokus */
+  }
+
+  
