@@ -83,20 +83,41 @@ footer p {
     font-size: 20px;
 }
 
+/* Gemeinsame Eigenschaften für alle Slides */
 .swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #333;
-    color: white;
-    font-size: 24px;
-    border-radius: 20px;
-    transition: transform 0.3s ease;
-  }
+    background: #e8491e; /* Hintergrundfarbe für inaktive Slides */
+    opacity: 0.5; /* Mache inaktive Slides weniger sichtbar */
+    transition: opacity 0.4s ease; /* Sanfter Übergang für die Opazität */
+    font-size: 18px;
+    border-radius: 15px;
+    transition: transform 0.3s ease; /* Sanfter Übergang */
+    margin: 0 15px; /* Abstand zwischen den Boxen */
+    height: 350px;
 
-  /* Der mittlere Slide soll größer angezeigt werden */
-  .swiper-slide-active {
-    transform: scale(1.2); /* Vergrößere das Element im Fokus */
-  }
+}
 
+/* Vergrößern der aktiven Slide */
+.swiper-slide-active {
+    transform: scale(1.1); /* Vergrößere die aktive Box um 10% */
+    z-index: 1; /* Stelle sicher, dass die aktive Box über den anderen liegt */
+    background: #e8491e;
+    transition: transform 0.4s ease, background 0.4s ease;
+    opacity: 0.95;
+    
+}
+
+.swiper-slide h3 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    text-align: center;
+    height: 0;
+}
+
+.swiper-slide p {
+    text-align: center;
+    padding: 0 10px; /* Abstand innen hinzufügen */
+}
   
