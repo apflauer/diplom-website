@@ -1,127 +1,41 @@
-/* styles.css */
-
-/* Allgemeine Stile */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    color: #333;
-}
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
+    background-color: #fdf1e3; /* Leichte Hintergrundfarbe mit einem warmen Ton */
 }
 
-/* Header-Stile */
-header {
-    padding: 20px;
-    text-align: center;
-    background: #e8491d;
+.header-gradient {
+    background: linear-gradient(to right, #ff5733, #c70039); /* Rot-orientierter Farbverlauf */
 }
 
-#grad1 {
-    background-image: linear-gradient(90deg, #e8491d, #f4c542); 
+.footer-gradient {
+    background: linear-gradient(to right, #ffc300, #ff5733); /* Gelb-zu-Rot-Farbverlauf */
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    color: #ffffff;
-    outline: white;
-    outline-width: 10px;
+.heading-color {
+    color: #ff5733; /* Überschriftenfarbe passend zur Farbpalette */
 }
 
-/* Navigationsleiste */
-nav {
-    display: flex;
-    justify-content: center;
-    background: #35424a;
-    padding: 10px 0;
+.card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ff5733; /* Passend zur neuen Farbpalette */
+    padding: 15px;
+    height: 100%;
+    border-radius: 10px;
 }
 
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 1.1em;
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-nav a:hover {
-    background: #e8491d;
-    transition: background 0.3s;
+#bilder img {
+    height: 220px; 
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-#overview {
-    padding: 20px;
-    text-align: left;
+#overview h2, #teams h2, #milestones h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
-
-#overview h2{
-    text-align: left;
-    margin: 0;
-    font-size: 2.5em;
-}
-
-
-
-/* Footer-Stile */
-footer {
-    background: #e8491d;
-    color: #ffffff;
-    text-align: center;
-    padding: none;
-    position: fixed;
-    width: 100%;
-    height: 8%;
-    bottom: 0;
-    display: flex; /* Flexbox zur Zentrierung */
-    justify-content: center; /* Horizontale Zentrierung */
-    align-items: center; /* Vertikale Zentrierung */
-}
-
-footer p {
-    margin: 0;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-/* Gemeinsame Eigenschaften für alle Slides */
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #e8491e; /* Hintergrundfarbe für inaktive Slides */
-    opacity: 0.5; /* Mache inaktive Slides weniger sichtbar */
-    transition: opacity 0.4s ease; /* Sanfter Übergang für die Opazität */
-    font-size: 18px;
-    border-radius: 15px;
-    transition: transform 0.3s ease; /* Sanfter Übergang */
-    margin: 0 15px; /* Abstand zwischen den Boxen */
-    height: 350px;
-
-}
-
-/* Vergrößern der aktiven Slide */
-.swiper-slide-active {
-    transform: scale(1.1); /* Vergrößere die aktive Box um 10% */
-    z-index: 1; /* Stelle sicher, dass die aktive Box über den anderen liegt */
-    background: #e8491e;
-    transition: transform 0.4s ease, background 0.4s ease;
-    opacity: 0.95;
-    
-}
-
-.swiper-slide h3 {
-    margin: 0 0 10px;
-    font-size: 1.5em;
-    text-align: center;
-    height: 0;
-}
-
-.swiper-slide p {
-    text-align: center;
-    padding: 0 10px; /* Abstand innen hinzufügen */
-}
-  
